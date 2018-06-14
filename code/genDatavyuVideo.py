@@ -80,13 +80,14 @@ def imgDirGenerator(dirPath):
         tempDraw = ImageDraw.Draw(img)
         
         # Label image
-        boxSize = tempDraw.textsize(os.path.basename(orderedFiles[i]),font=font)
+        tempName = os.path.basename(orderedFiles[i])
+        boxSize = tempDraw.textsize(tempName,font=font)
         x_pos = x_loc - boxSize[0]//2
         y_pos = y_loc - boxSize[1]//2
         tempDraw.rectangle([x_pos-5, y_pos-5,
                   x_pos + boxSize[0] + 5, y_pos + boxSize[1] + 5], 
                            fill=(0,0,0))
-        tempDraw.text((x_pos, y_pos),orderedFiles[i],(255,255,255),font=font)
+        tempDraw.text((x_pos, y_pos),tempName,(255,255,255),font=font)
         yield(np.array(img))
 
 print("Starting image import and resizing...")
