@@ -11,7 +11,7 @@ requirements.txt packages, can be installed using:
 pip install -r requirements.txt
 ```
 ### Usage
-Code must be run from the code directory. (Sorry about this, didn't want to make a proper package)
+Code must be run from the code directory. 
 ```
 python genDatavyuVideo.py </path/to/screenShotDirectory> </path/to/outMovie.mp4>
 ```  
